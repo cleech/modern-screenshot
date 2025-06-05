@@ -22,8 +22,12 @@ export function copyCssStyles<T extends HTMLElement | SVGElement>(
   style.delete('transition-property')
   style.delete('all') // svg: all
   style.delete('d') // svg: d
+
   // [cdl] but I need this
   // style.delete('content') // Safari shows pseudoelements if content is set
+  // [cdl] but this is breaking chrome, and I'm not even sure where it comes from
+  style.delete('-webkit-border-image')
+
   if (isRoot) {
     style.delete('margin-top')
     style.delete('margin-right')

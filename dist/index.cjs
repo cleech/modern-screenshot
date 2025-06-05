@@ -784,6 +784,7 @@ function copyCssStyles(node, cloned, isRoot, context) {
   style.delete("transition-property");
   style.delete("all");
   style.delete("d");
+  style.delete("-webkit-border-image");
   if (isRoot) {
     style.delete("margin-top");
     style.delete("margin-right");
@@ -1186,8 +1187,8 @@ function toRE(url) {
 const properties = [
   "background-image",
   "border-image-source",
-  "-webkit-border-image",
-  "-webkit-mask-image",
+  // '-webkit-border-image',
+  // '-webkit-mask-image',
   "list-style-image"
 ];
 function embedCssStyleImage(style, context) {

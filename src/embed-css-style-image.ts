@@ -5,8 +5,8 @@ import { IN_FIREFOX, IN_SAFARI } from './utils'
 const properties = [
   'background-image',
   'border-image-source',
-  '-webkit-border-image',
-  '-webkit-mask-image',
+  // '-webkit-border-image',
+  // '-webkit-mask-image',
   'list-style-image',
 ]
 
