@@ -22,7 +22,8 @@ export function copyCssStyles<T extends HTMLElement | SVGElement>(
   style.delete('transition-property')
   style.delete('all') // svg: all
   style.delete('d') // svg: d
-  style.delete('content') // Safari shows pseudoelements if content is set
+  // [cdl] but I need this
+  // style.delete('content') // Safari shows pseudoelements if content is set
   if (isRoot) {
     style.delete('margin-top')
     style.delete('margin-right')
